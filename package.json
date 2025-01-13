@@ -9,8 +9,27 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.5",
     "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.1.4",
+    "@astrojs/tailwind": "^5.1.4",
+    "@astrolib/seo": "^1.0.0-beta.8",
+    "@headlessui/react": "^2.2.0",
+    "@nanostores/react": "^0.8.4",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.3",
+    "astro": "^5.1.5",
+    "axios": "^1.7.9",
+    "lucide-react": "^0.471.1",
+    "nanostores": "^0.11.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "saveplays-footer": "^0.0.4",
+    "saveplays-navbar": "^0.0.3",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "sass": "^1.83.1"
   }
 }

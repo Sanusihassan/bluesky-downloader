@@ -1,0 +1,129 @@
+@import "cssmolecule";
+@import "custom-bs";
+@import "./scss/mixins";
+
+@include bootstrap;
+
+@import "saveplays-footer/src/scss/_footer.scss";
+@import "saveplays-navbar/src/scss/_navbar.scss";
+
+
+body {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-center {
+    @include extend("text-center")
+}
+
+.container {
+    @include extend("container");
+}
+
+.lead {
+    @include extend("lead")
+}
+
+
+$main-color: #2ab7a9;
+
+.searh-input {
+    @include extend("row mb-2");
+    flex-wrap: nowrap;
+
+    @include sm {
+        padding: 0 .38em;
+    }
+
+    .input {
+        flex: 2 0 80%;
+        @include extend("pl-0");
+
+        @include sm {
+            flex: 1 0 80%;
+        }
+
+        @include xs {
+            flex: 1 0 75%;
+        }
+
+        user-select: none;
+    }
+
+    input {
+        box-sizing: border-box;
+        background-color: transparent;
+        @include extend("w-100 h-100");
+        font-size: 1em;
+        padding: 0 .5em;
+        border: 2px solid #ccc;
+        transition: border-color .2s, box-shadow .2s;
+        outline: none;
+
+        &:focus {
+            border-color: $main-color;
+        }
+    }
+
+    button {
+        @include extend("btn btn-light");
+        color: inherit;
+        padding: .85em 0;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+        border: 2px solid #ccc;
+
+        // border-left-width: 0;
+        &:focus {
+            border-color: $main-color;
+        }
+
+        flex: 1 1 0%;
+
+        svg.loading {
+            animation: 0.5s linear loading infinite forwards
+        }
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+svg {
+    display: initial !important;
+
+    @include ar-wrapper {
+        direction: ltr;
+    }
+}
+
+.marker {
+    background-color: $main-color;
+}
+
+.text-primary {
+    color: $main-color;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+.key-features footer {
+    background-color: white !important;
+}
+
+.golden-icon {
+    color: gold;
+}

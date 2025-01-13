@@ -1,0 +1,25 @@
+---
+import Footer from "saveplays-footer/src/partials/Footer.astro";
+import NavBar from "saveplays-navbar/components/NavBar.tsx";
+import "./index.scss";
+import Head from "./Head.astro";
+const { lang, title, pageProps } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang === "" ? "en" : lang} dir={lang === "ar" ? "rtl" : ""}>
+    <Head {...pageProps}>
+    <body>
+        <header>
+            <NavBar lang={lang} client:load />
+        </header>
+
+        <h1 class="text-center">{title}</h1>
+
+        <main>
+            <slot />
+        </main>
+
+        <Footer lang={lang} />
+    </body>
+</html>

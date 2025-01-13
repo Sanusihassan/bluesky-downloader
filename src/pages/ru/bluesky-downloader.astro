@@ -1,0 +1,22 @@
+---
+import { SearchInput } from "../../components/Input";
+import BaseLayout from "../../BaseLayout.astro";
+import DownloadResult from "../../components/DownloadResult";
+import {
+	downloadResult,
+	pageProps,
+	hero,
+	howTo,
+} from "../../content/content-ru";
+import HowToUse from "../../partials/HowToUse.astro";
+---
+
+<BaseLayout lang="ru" pageProps={pageProps}>
+	<h1 class="text-center">{hero.title}</h1>
+	<p class="lead text-center">{hero.description}</p>
+	<div class="container">
+		<SearchInput client:load />
+		<DownloadResult client:load content={downloadResult} />
+		<HowToUse howTo={howTo} />
+	</div>
+</BaseLayout>

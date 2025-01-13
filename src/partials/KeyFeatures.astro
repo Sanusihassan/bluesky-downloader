@@ -1,0 +1,88 @@
+---
+import { CiCloudRainbow } from "react-icons/ci";
+import type { keyFeaturesType } from "../content/content";
+import { FaCheckCircle } from "react-icons/fa";
+const { keyFeatures } = Astro.props as { keyFeatures: keyFeaturesType };
+import { IoBulbOutline } from "react-icons/io5";
+---
+
+<section
+    class="key-features py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50"
+    aria-labelledby="key-features-title"
+>
+    <div class="max-w-4xl mx-auto">
+        <h2
+            id="key-features-title"
+            class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 flex justify-center items-center"
+        >
+            <IoBulbOutline className="golden-icon" />
+            {keyFeatures.title}
+        </h2>
+
+        <div class="space-y-6 mb-12" role="list" aria-label="Key features list">
+            {
+                keyFeatures.features.map((feature, index) => (
+                    <div
+                        class="feature-item bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+                        data-aos="fade-up"
+                        data-aos-delay={index * 100}
+                        role="listitem"
+                    >
+                        <p class="text-lg text-gray-700 flex items-center justify-center">
+                            <span class="feature-icon mr-3 text-emerald-500">
+                                <FaCheckCircle
+                                    className="w-5 h-5"
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            {feature}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+
+        <footer
+            class="mt-12 text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="500"
+        >
+            <p class="lead">
+                <CiCloudRainbow className="cloud-rainbow" />
+                {keyFeatures.footer}
+            </p>
+        </footer>
+    </div>
+</section>
+
+<style>
+    .key-features {
+        scroll-margin-top: 2rem;
+    }
+
+    .feature-item {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .key-features [data-aos] {
+            transition: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .feature-item {
+            text-align: left;
+        }
+
+        .feature-item p {
+            justify-content: flex-start;
+        }
+    }
+    .cloud-rainbow {
+        color: #c0392b;
+    }
+</style>
