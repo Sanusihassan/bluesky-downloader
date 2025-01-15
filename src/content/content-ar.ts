@@ -62,6 +62,7 @@ export const pageProps: SeoProps = {
         cardType: "summary_large_image",
     },
 };
+export const placeholder = "ألصق الرابط هنا";
 
 export const hero: heroType = {
     title: "أداة تحميل فيديو بلوسكاي 🦋",

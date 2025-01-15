@@ -1,5 +1,6 @@
 import type { SeoProps } from "../head";
 import type { _downloadResult, heroType, howToType } from "./content";
+export const placeholder = "Fügen Sie Ihren Link hier ein";
 export const pageProps: SeoProps = {
     title: "Bluesky Video Downloader",
     description:

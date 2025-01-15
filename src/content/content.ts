@@ -62,6 +62,7 @@ export const pageProps: SeoProps = {
     },
 };
 
+export const placeholder = "Paste your link here";
 export const hero = {
     title: "Bluesky Video Downloader 🦋",
     description: "Download your favorite Bluesky videos with ease and in a High-Quality MP4 format!"

@@ -7,6 +7,7 @@ import {
 	pageProps,
 	hero,
 	howTo,
+	placeholder,
 } from "../../content/content-id";
 import HowToUse from "../../partials/HowToUse.astro";
 ---
@@ -15,7 +16,7 @@ import HowToUse from "../../partials/HowToUse.astro";
 	<h1 class="text-center">{hero.title}</h1>
 	<p class="lead text-center">{hero.description}</p>
 	<div class="container">
-		<SearchInput client:load />
+		<SearchInput client:load placeholder={placeholder} />
 		<DownloadResult client:load content={downloadResult} />
 		<HowToUse howTo={howTo} />
 	</div>

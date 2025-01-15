@@ -1,5 +1,6 @@
 import type { SeoProps } from "../head";
 import type { _downloadResult, heroType, howToType } from "./content";
+export const placeholder = "আপনার লিঙ্ক এখানে পেস্ট করুন";
 export const pageProps: SeoProps = {
     title: "ব্লুস্কাই ভিডিও ডাউনলোডার",
     description:
